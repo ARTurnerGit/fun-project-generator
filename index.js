@@ -19,6 +19,12 @@ fs.mkdir("./newproject", err => {
         console.log("made README.md");
       }
     });
+    fs.writeFile("./newproject/.gitignore", "", err => {
+      if (err) console.log(err);
+      else {
+        console.log("made .gitignore");
+      }
+    });
     fs.mkdir("./newproject/spec", err => {
       if (err) console.log(err);
       else {
