@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const fs = require("fs");
 const { exec } = require("child_process");
 
@@ -54,6 +56,10 @@ fs.mkdir("./newproject", err => {
     exec("git init", { cwd: "./newproject" }, (err, stdout, stderr) => {
       if (err) console.log(err);
       console.log("git init complete");
+    });
+    exec("npm install", { cwd: "./newproject" }, (err, stdout, stderr) => {
+      if (err) console.log(err);
+      console.log("npm install complete");
     });
   }
 });

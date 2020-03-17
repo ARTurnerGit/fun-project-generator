@@ -1,8 +1,11 @@
 {
-  "name": "fun-project-generator",
+  "name": "project-generator",
   "version": "1.0.0",
   "description": "In the early days of Node, callbacks were the main way of handling asynchronicity. In this sprint, you will have to build async functions using your knowledge of callbacks, in order to make requests to our server.",
   "main": "index.js",
+  "bin": {
+    "generateProject": "./project-generator.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
