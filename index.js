@@ -25,10 +25,10 @@ fs.mkdir("./newproject", err => {
         console.log("made .gitignore");
       }
     });
-    fs.writeFile("./newproject/.eslintrc.json", "", err => {
+    fs.copyFile("./.eslintrc.json", "./newproject/.eslintrc.json", err => {
       if (err) console.log(err);
       else {
-        console.log("made .eslintrc.json");
+        console.log("copied the sample .eslintrc.json into the new file");
       }
     });
     fs.mkdir("./newproject/spec", err => {
