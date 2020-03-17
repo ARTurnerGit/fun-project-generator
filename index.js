@@ -25,6 +25,12 @@ fs.mkdir("./newproject", err => {
         console.log("made .gitignore");
       }
     });
+    fs.writeFile("./newproject/.eslintrc.json", "", err => {
+      if (err) console.log(err);
+      else {
+        console.log("made .eslintrc.json");
+      }
+    });
     fs.mkdir("./newproject/spec", err => {
       if (err) console.log(err);
       else {
